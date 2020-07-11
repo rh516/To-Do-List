@@ -1,11 +1,12 @@
 <%- include("header") -%>
 
   <div class="box" id="heading">
-    <h1> <%= listTitle %> </h1>
+    <h1> <%=listTitle%> </h1>
   </div>
 
   <div class="box">
-
+    <!-- renders each to-do item -->
+    <!-- checking the checkbox deletes the item from the database -->
     <% newListItems.forEach(function(item){ %>
       <form action="/delete" method="post">
         <div class="item">
@@ -15,9 +16,9 @@
       </form>
     <% }) %>
 
+    <!-- form for posting new to-do items-->
     <form class="item" action="/" method="post">
       <input type="text" name="newItem" placeholder="New Item">
       <button type="submit" name="list">+</button>
     </form>
-
   </div>

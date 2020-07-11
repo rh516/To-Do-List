@@ -1,9 +1,7 @@
-//jshint esversion:6
+// jshint esversion:6
 
-exports.getDate = function() {
-
+exports.getDate = function(){
   const today = new Date();
-
   const options = {
     weekday: "long",
     day: "numeric",
@@ -11,17 +9,14 @@ exports.getDate = function() {
   };
 
   return today.toLocaleDateString("en-US", options);
-
 };
 
-exports.getDay = function () {
 
+exports.getDay = function(){
   const today = new Date();
-
   const options = {
     weekday: "long"
   };
 
   return today.toLocaleDateString("en-US", options);
-
 };
