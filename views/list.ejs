@@ -7,7 +7,7 @@
   <div class="box">
     <!-- renders each to-do item -->
     <!-- checking the checkbox deletes the item from the database -->
-    <% newListItems.forEach(function(item){ %>
+    <% newListItems.forEach((item) => { %>
       <form action="/delete" method="post">
         <div class="item">
           <input type="checkbox" name="checkbox" value="<%=item._id%>" onChange="this.form.submit()">
